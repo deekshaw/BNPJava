@@ -12,7 +12,7 @@ class Factorial{
 
 		int factorial = 1;
 
-		for(int i=1; i<=number; i++){
+		for(int i = 1; i <= number; i++){
 			factorial = factorial*i;
 		}
 

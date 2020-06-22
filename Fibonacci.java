@@ -6,8 +6,8 @@ class Fibonacci{
 		int numb2 = 1;
 		int numb = 0;
 
-		for(int i=1; i<=11; i++){		
-			if( i==1 | i==2){
+		for(int i = 1; i <= 11; i++){		
+			if( i == 1 | i == 2){
 				System.out.print("1 ");
 			}
 			else{
