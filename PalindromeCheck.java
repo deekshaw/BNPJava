@@ -26,9 +26,7 @@ class PalindromeCheck{
 
 				if(firstChar == lastChar){
 					firstChar += 1;
-					System.out.println(firstChar);
 					lastChar -= 1;
-					System.out.println(lastChar);
 				}
 				else
 					palindromeFlag = 1;
