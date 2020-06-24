@@ -20,13 +20,18 @@ class PalindromeCheck{
 		char lastChar = checkPalindrome.charAt(length-1);
 
 		for(int i=0; i < Math.floor(length/2) ; i++){
+
 			if(firstChar == lastChar){
+
 				firstChar = checkPalindrome.charAt(0+(i+1));
 				lastChar = checkPalindrome.charAt(length-1-(i+1));
+
 			}
 			else{
+
 				palindromeFlag = 1;
 				break;
+				
 			}
 		}
 		
