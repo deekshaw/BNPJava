@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math; 
 
 class PalindromeCheck{
 
@@ -12,43 +13,23 @@ class PalindromeCheck{
 		checkPalindrome = checkPalindrome.toLowerCase();
 
 		int length =  checkPalindrome.length();
-		System.out.println(length);
 
 		int palindromeFlag = 0;
 
 		char firstChar = checkPalindrome.charAt(0);
 		char lastChar = checkPalindrome.charAt(length-1);
 
-
-		if(length % 2 == 0){
-
-			for(int i=0; i < length/2 ; i++){
-
-				if(firstChar == lastChar){
-					firstChar += 1;
-					lastChar -= 1;
-				}
-				else
-					palindromeFlag = 1;
-					break;
+		for(int i=0; i < Math.floor(length/2) ; i++){
+			if(firstChar == lastChar){
+				firstChar = checkPalindrome.charAt(0+(i+1));
+				lastChar = checkPalindrome.charAt(length-1-(i+1));
 			}
-			
-		}
-		else{
-
-			for(int i=0; i < (length-1)/2 ; i++){
-
-				if(firstChar == lastChar){
-					firstChar += 1;
-					lastChar -= 1;
-				}
-				else
-					palindromeFlag = 1;
-					break;
+			else{
+				palindromeFlag = 1;
+				break;
 			}
-
 		}
-
+		
 		if(palindromeFlag == 1)
 			System.out.println("Entered String is not a Palindrome.");
 		else
